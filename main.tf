@@ -14,7 +14,7 @@ resource "azurerm_virtual_machine_packet_capture" "virtual_machine_packet_captur
   }
 
   dynamic "filter" {
-    for_each = each.value.filter != null ? [each.value.filter] : []
+    for_each = each.value.filter != null ? each.value.filter : []
     content {
       local_ip_address  = filter.value.local_ip_address
       local_port        = filter.value.local_port
