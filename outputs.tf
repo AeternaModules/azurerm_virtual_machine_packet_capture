@@ -1,3 +1,7 @@
+output "virtual_machine_packet_captures_id" {
+  description = "Map of id values across all virtual_machine_packet_captures, keyed the same as var.virtual_machine_packet_captures"
+  value       = { for k, v in azurerm_virtual_machine_packet_capture.virtual_machine_packet_captures : k => v.id }
+}
 output "virtual_machine_packet_captures_filter" {
   description = "Map of filter values across all virtual_machine_packet_captures, keyed the same as var.virtual_machine_packet_captures"
   value       = { for k, v in azurerm_virtual_machine_packet_capture.virtual_machine_packet_captures : k => v.filter }
