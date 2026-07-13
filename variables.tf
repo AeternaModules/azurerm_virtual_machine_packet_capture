@@ -24,9 +24,9 @@ EOT
     name                                = string
     network_watcher_id                  = string
     virtual_machine_id                  = string
-    maximum_bytes_per_packet            = optional(number) # Default: 0
-    maximum_bytes_per_session           = optional(number) # Default: 1073741824
-    maximum_capture_duration_in_seconds = optional(number) # Default: 18000
+    maximum_bytes_per_packet            = optional(number)
+    maximum_bytes_per_session           = optional(number)
+    maximum_capture_duration_in_seconds = optional(number)
     storage_location = object({
       file_path          = optional(string)
       storage_account_id = optional(string)
